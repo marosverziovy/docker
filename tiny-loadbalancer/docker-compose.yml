@@ -1,0 +1,10 @@
+version: '2'
+services:
+  nginx:
+    image: nginx
+    volumes:
+      - "./volume/conf.d/:/etc/nginx/conf.d/:ro"
+      - "./volume/ssl/:/etc/nginx/ssl/:ro"
+    ports:
+      - "80:80"
+      - "443:443"

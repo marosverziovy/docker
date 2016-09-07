@@ -1,0 +1,9 @@
+version: '2'
+services:
+  tinyproxy:
+    build: .
+    ports:
+      - "6789:8888"
+    dns: 
+      - 8.8.8.8
+      - 8.8.4.4
