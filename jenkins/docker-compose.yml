@@ -1,0 +1,13 @@
+version: '2'
+services:
+  data:
+    image: busybox
+    volumes:
+      - /var/jenkins_home
+  ci:
+    image: jenkins:2.7.4
+    ports:
+      - 8082:8080
+      - 50000:50000
+    volumes_from:
+      - data
